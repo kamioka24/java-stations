@@ -16,5 +16,18 @@ public class Main {
     }
 
     // ここから
+    class Item {
+        String name;
+        int price;
+        String category;
+        String[] tags;
+
+        Item(String name, int price, String category, String[] tags) {
+            this.name = name;
+            this.price = price;
+            this.category = category;
+            this.tags = tags;
+        }
+    }    
     // ここまで
 }
