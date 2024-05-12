@@ -44,11 +44,11 @@ public class Main {
         }
 
         if (totalA < totalB && totalA < totalC) {
-            System.err.println("A");
+            System.out.println("A");
         } else if (totalB < totalA && totalB < totalC) {
-            System.err.println("B");
+            System.out.println("B");
         } else {
-            System.err.println("C");
+            System.out.println("C");
         }
         // ここまで
     }
