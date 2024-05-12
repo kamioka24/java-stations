@@ -8,11 +8,11 @@ public class Main {
 
     private void test() {
         // テストする場合、以下の「//」を消してください。
-        //Item item = new Item("商品A", 1000, "食品", new String[]{"お菓子", "要冷蔵"});
-        //System.out.println("商品名: " + item.name);
-        //System.out.println("価格" + item.price);
-        //System.out.println("カテゴリ:" + item.category);
-        //System.out.println("タグ: " + Arrays.toString(item.tags));
+        Item item = new Item("商品A", 1000, "食品", new String[]{"お菓子", "要冷蔵"});
+        System.out.println("商品名: " + item.name);
+        System.out.println("価格" + item.price);
+        System.out.println("カテゴリ:" + item.category);
+        System.out.println("タグ: " + Arrays.toString(item.tags));
     }
 
     // ここから
@@ -27,6 +27,14 @@ public class Main {
             this.price = price;
             this.category = category;
             this.tags = tags;
+        }
+
+        float getPriceWithTax(boolean isKeigenzeiritu) {
+            if (isKeigenzeiritu) {
+                return price * 1.08f;
+            } else {
+                return price * 1.1f;
+            }
         }
     }    
     // ここまで
