@@ -15,6 +15,41 @@ public class Main {
 
     public static void test(int[] itemPrices) {
         // ここから
+
+        int postage = 800;
+
+        int totalA = 0;
+        for (int i = 0; i < itemPrices.length; i = i + 1) {
+            totalA = totalA + itemPrices[i];
+        }
+
+        float totalB = 0;
+        for (int i = 0; i < itemPrices.length; i = i + 1) {
+            totalB = totalB + itemPrices[i] * 0.9f;
+        }
+        if (totalB < 5000) {
+            totalB = totalB + postage;
+        }
+
+        float totalC = 0;
+        for (int i = 0; i < itemPrices.length; i = i + 1) {
+            if (itemPrices[i] < 2000 ) {
+                totalC = totalC + itemPrices[i];   
+            } else {
+                totalC = totalC + itemPrices[i] * 0.8f;
+            }
+        }
+        if (totalC < 5000) {
+            totalC = totalC + postage;
+        }
+
+        if (totalA < totalB && totalA < totalC) {
+            System.err.println("A");
+        } else if (totalB < totalA && totalB < totalC) {
+            System.err.println("B");
+        } else {
+            System.err.println("C");
+        }
         // ここまで
     }
 }
